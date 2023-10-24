@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&family=Nosifer&family=Poppins:wght@300&display=swap");
+@keyframes nav-bar-animation1 {
+  0% {
+    transform: translate(200%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+@keyframes nav-bar-animation2 {
+  0% {
+    transform: translate(200%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.home-page-con {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.not-found-con {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  color: #de8234;
+  font-size: 5.5rem;
+}
+.not-found-con :first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-con h4 {
+  font-size: 1.5rem;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.not-found-con p {
+  font-size: 0.8rem;
+  color: #475569;
+  text-align: center;
+  font-weight: 500;
+  word-spacing: 5%;
+}
+
+.not-found-con button {
+  margin: 2%;
+  padding: 1%;
+  font-size: 0.9rem;
+  border-radius: 2%;
+  border-color: #de8234;
+  color: #fff;
+  background-color: #de8234;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.not-found-con button:hover {
+  color: #de8234;
+  background-color: #fff;
+}
+
+/**Slider css*/
+
+.slider-main-con {
+  height: auto;
+  width: 100vw;
+  padding: 3%;
+}
+
+.nav-buttons-con {
+  display: none;
+}
+
+.nav-bar {
+  padding: 0.9% 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar ul {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.nav-bar ul button {
+  font-size: 1rem;
+  background-color: #800000;
+  border: 0;
+  color: #fff;
+  padding: 10% 20%;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.nav-bar ul button:active {
+  font-size: 1rem;
+  background-color: #fff;
+  border: 0;
+  color: #800000;
+  padding: 10% 20%;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.nav-bar li:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  color: #800000;
+}
+
+.nav-bar-mobile {
+  display: none;
+}
+
+/**Logo Css*/
+
+.Logo {
+  font-family: "Nosifer", sans-serif;
+  font-size: 0.9rem;
+  color: #800000;
+  cursor: pointer;
+}
+
+.popular-res {
+  padding: 1% 3%;
+}
+
+.popular-res h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.popular-res :last-child {
+  margin-top: 1%;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-res :last-child > select {
+  border: 0;
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .not-found-con button {
+    margin-top: 5%;
+    padding: 2%;
+    font-size: 0.9rem;
+  }
+
+  .slider-main-con {
+    width: 110vw;
+    padding: 0;
+  }
+  .slider-main-con img {
+    margin-left: -8%;
+    height: 20vh;
+  }
+
+  .Logo {
+    font-size: 0.6rem;
+  }
+
+  .nav-bar {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .nav-bar ul {
+    display: none;
+  }
+
+  .nav-buttons-con {
+    position: relative;
+    height: auto;
+    width: auto;
+    width: auto;
+    display: inline;
+    margin-right: 5%;
+  }
+
+  .ham-con {
+    height: 0.2rem;
+    width: 1.5rem;
+    background-color: #800000;
+    margin: 20%;
+  }
+
+  .nav-bar-mobile1 {
+    display: inline;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    filter: drop-shadow(-1px -1px 5px #222);
+    background-color: #fff;
+    transition: 1.5s all ease-in-out;
+    animation: nav-bar-animation1 1.5s alternate ease-in-out;
+  }
+
+  .nav-bar-mobile1 > button {
+    background-color: transparent;
+    border: 0;
+    color: #800000;
+    font-size: 2rem;
+    margin-left: 5%;
+  }
+
+  .nav-bar-mobile1 ul li {
+    list-style: none;
+    margin: 5%;
+    cursor: pointer;
+    color: #475569;
+    font-size: 1rem;
+  }
+
+  .nav-bar-mobile1 li:hover {
+    color: #800000;
+  }
+
+  .nav-bar-mobile1 ul button {
+    font-size: 1.2rem;
+    background-color: #800000;
+    border: 0;
+    color: #fff;
+    padding: 3% 8%;
+    border-radius: 0.2rem;
+  }
+
+  .nav-bar-mobile1 ul button:active {
+    font-size: 1.2rem;
+    background-color: #fff;
+    border: 0;
+    color: #800000;
+    padding: 3% 8%;
+    border-radius: 0.2rem;
+  }
+
+  .nav-bar-mobile2 {
+    display: inline;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    filter: drop-shadow(-1px -1px 5px #222);
+    background-color: #fff;
+    transition: 2s all ease-in-out;
+    animation: nav-bar-animation2 2s alternate-reverse ease-in-out;
+  }
+
+  .nav-bar-mobile2 > button {
+    background-color: transparent;
+    border: 0;
+    color: #800000;
+    font-size: 2rem;
+    margin-left: 5%;
+  }
+
+  .nav-bar-mobile2 ul li {
+    list-style: none;
+    margin: 5%;
+    cursor: pointer;
+    color: #475569;
+    font-size: 1rem;
+  }
+
+  .nav-bar-mobile2 li:hover {
+    color: #800000;
+  }
+
+  .nav-bar-mobile2 ul button {
+    font-size: 1.2rem;
+    background-color: #800000;
+    border: 0;
+    color: #fff;
+    padding: 3% 8%;
+    border-radius: 0.2rem;
+  }
+
+  .nav-bar-mobile2 ul button:active {
+    font-size: 1.2rem;
+    background-color: #fff;
+    border: 0;
+    color: #800000;
+    padding: 3% 8%;
+    border-radius: 0.2rem;
+  }
+
+  .popular-res {
+    margin-top: 10%;
+  }
+
+  .popular-res h4 {
+    font-size: 1.25rem;
+  }
+
+  .popular-res :last-child {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .popular-res p {
+    margin-top: 2%;
+    font-size: 0.7rem;
+  }
+
+  .popular-res :last-child > select {
+    font-size: 0.7rem;
+    outline: none;
+    margin-top: 3.5%;
+  }
+
+  .popular-res :last-child > div {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5%;
+    padding: 0;
+  }
+}

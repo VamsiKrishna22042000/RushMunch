@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&family=Nosifer&family=Poppins:wght@300&display=swap");
+.hotels-con {
+  padding: 1% 2%;
+  font-size: 0.8rem;
+  margin-top: 2.5%;
+}
+.hotels-con input {
+  width: 20%;
+  border-top: hidden;
+  border-left: hidden;
+  border-right: hidden;
+  padding-left: 1%;
+  font-size: 0.7rem;
+  border-width: 1px;
+  outline: none;
+}
+
+/**Restarunts css*/
+
+.restarants-con {
+  height: auto;
+  width: 100%;
+  margin-top: 2.5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.restarants-con > li {
+  position: relative;
+  height: 20vh;
+  width: 30%;
+  flex-wrap: wrap;
+  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.restarants-con > li:hover {
+  transition: all 0.5s ease-in-out;
+  box-shadow: 1px 1px 10px #22222240;
+}
+
+.restarants-con > li > img {
+  height: 80%;
+  width: 40%;
+  border-radius: 0.5rem;
+}
+
+.restarants-details {
+  height: 80%;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  color: #334155;
+}
+
+.restarants-details > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.detials-re {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.detials-re img {
+  height: 12px;
+  width: 12px;
+}
+
+.details-para {
+  color: #64748b;
+  margin-left: 0.25rem;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.65rem;
+}
+
+.pageination {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #031848;
+}
+
+.pageination > div {
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageination button {
+  font-weight: bold;
+  border: 0;
+  background-color: transparent;
+  color: #031848;
+}
+
+@media screen and (max-width: 600px) {
+  .hotels-con {
+    margin-top: 5%;
+  }
+
+  .hotels-con input {
+    width: 55%;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    padding-left: 1%;
+    font-size: 0.7rem;
+  }
+
+  .restarants-con {
+    padding: 0%;
+  }
+
+  .restarants-con > li {
+    position: relative;
+    height: 20vh;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .restarants-details {
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+
+  .restarants-details > p {
+    font-size: 0.9rem;
+  }
+
+  .detials-re {
+    font-size: 1.1rem;
+    margin-left: 2%;
+  }
+
+  .detials-re img {
+    height: 16px;
+    width: 16px;
+  }
+
+  .details-para {
+    font-size: 0.8rem;
+  }
+
+  .pageination > div {
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+    width: 30%;
+  }
+}
