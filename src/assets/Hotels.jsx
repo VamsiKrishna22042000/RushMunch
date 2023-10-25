@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import "./hotels.css";
 import axios from "axios";
 
-const Hotels = () => {
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const Hotels = ({ priceSort }) => {
   const [details, setDetails] = useState(() => {
     return [];
   });
@@ -16,7 +19,7 @@ const Hotels = () => {
 
   useEffect(() => {
     getHotels();
-  }, [search, activePage]);
+  }, [search, activePage, priceSort]);
 
   const getHotels = async () => {
     try {
@@ -24,7 +27,7 @@ const Hotels = () => {
       let offset = (activePage - 1) * limit;
       const apiKey = import.meta.env.VITE_REACT_APP_API_URL;
 
-      const url = `${apiKey}/restaurants-list?search=${search}&offset=${offset}&limit=${limit}&sort_by_rating=Lowest`;
+      const url = `${apiKey}/restaurants-list?search=${search}&offset=${offset}&limit=${limit}&sort_by_rating=${priceSort}`;
 
       const reqConfigure = {
         headers: {
@@ -40,12 +43,22 @@ const Hotels = () => {
         setTotalPage(Math.ceil(res.data.total / limit));
       }
     } catch (error) {
-      alert(error.message);
+      toast.info("Restaurant Not Found", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     }
   };
 
   return (
     <div className="hotels-con">
+      <ToastContainer />
       <label>Search Restaurants &nbsp;:&nbsp; </label>
       <input
         onChange={(e) => {
@@ -56,24 +69,22 @@ const Hotels = () => {
       />
       <ul className="restarants-con">
         {details.map((each) => (
-          <>
-            <li>
-              <img src={each.image_url} alt={each.id} />
-              <div className="restarants-details">
-                <h3>{each.name}</h3>
-                <p>{each.menu_type}</p>
-                <div className="detials-re">
-                  <img src="/ratingstar.png" />
-                  <p style={{ marginLeft: ".25rem" }}>
-                    {each.user_rating.rating}
-                  </p>
-                  <p className="details-para">
-                    ({each.user_rating.total_reviews} ratings)
-                  </p>
-                </div>
+          <li key={each.name}>
+            <img src={each.image_url} alt={each.id} />
+            <div className="restarants-details">
+              <h3>{each.name}</h3>
+              <p>{each.menu_type}</p>
+              <div className="detials-re">
+                <img src="/ratingstar.png" />
+                <p style={{ marginLeft: ".25rem" }}>
+                  {each.user_rating.rating}
+                </p>
+                <p className="details-para">
+                  ({each.user_rating.total_reviews} ratings)
+                </p>
               </div>
-            </li>
-          </>
+            </div>
+          </li>
         ))}
       </ul>
       <div className="pageination">

@@ -30,7 +30,6 @@
 
 .restarants-con > li {
   position: relative;
-  height: 20vh;
   width: 30%;
   flex-wrap: wrap;
   margin: 1%;
@@ -48,9 +47,10 @@
 }
 
 .restarants-con > li > img {
-  height: 80%;
-  width: 40%;
+  height: 17vh;
+  width: 42.5%;
   border-radius: 0.5rem;
+  margin: 5% 3%;
 }
 
 .restarants-details {
@@ -70,6 +70,11 @@
   font-family: "Poppins", sans-serif;
   font-size: 0.7rem;
   color: #64748b;
+  margin: 4% 0%;
+}
+
+.restarants-details > h3 {
+  margin: 2.5% 0%;
 }
 
 .detials-re {
@@ -78,6 +83,7 @@
   justify-content: flex-start;
   align-items: center;
   font-size: 0.8rem;
+  margin: 2.5% 0%;
 }
 
 .detials-re img {
@@ -140,10 +146,10 @@
 
   .restarants-con > li {
     position: relative;
-    height: 20vh;
+    height: auto;
     width: 100%;
     flex-wrap: wrap;
-    margin: 1%;
+    margin: 3% 1%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -152,18 +158,30 @@
     cursor: pointer;
   }
 
+  .restarants-con > li > img {
+    height: 14vh;
+    margin: 5% 3%;
+  }
+
   .restarants-details {
     justify-content: space-between;
     font-size: 1rem;
   }
 
+  .restarants-details > h3 {
+    margin-top: 5%;
+  }
+
   .restarants-details > p {
     font-size: 0.9rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   .detials-re {
     font-size: 1.1rem;
     margin-left: 2%;
+    margin-bottom: 5%;
   }
 
   .detials-re img {

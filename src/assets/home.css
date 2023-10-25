@@ -17,6 +17,31 @@
   }
 }
 
+@keyframes logoanimate {
+  0% {
+    transform: scale(0%);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: scale(100%);
+    opacity: 100%;
+  }
+}
+
+.loader-con {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nosifer", sans-serif;
+  font-size: 1rem;
+  color: #800000;
+  cursor: pointer;
+  animation: logoanimate 1s alternate;
+}
+
 .d-none {
   display: none;
 }
@@ -38,7 +63,7 @@
   justify-content: center;
   align-items: center;
   font-weight: bolder;
-  color: #de8234;
+  color: #800000;
   font-size: 5.5rem;
 }
 .not-found-con :first-child {
@@ -66,15 +91,15 @@
   padding: 1%;
   font-size: 0.9rem;
   border-radius: 2%;
-  border-color: #de8234;
+  border-color: #800000;
   color: #fff;
-  background-color: #de8234;
+  background-color: #800000;
   border-radius: 0.5rem;
   cursor: pointer;
 }
 
 .not-found-con button:hover {
-  color: #de8234;
+  color: #80000070;
   background-color: #fff;
 }
 
@@ -84,6 +109,7 @@
   height: auto;
   width: 100vw;
   padding: 3%;
+  margin-top: 4%;
 }
 
 .nav-buttons-con {
@@ -91,10 +117,15 @@
 }
 
 .nav-bar {
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
   padding: 0.9% 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
 }
 
 .nav-bar ul {
@@ -177,6 +208,7 @@
   }
 
   .slider-main-con {
+    margin-top: 15%;
     width: 110vw;
     padding: 0;
   }
@@ -190,8 +222,9 @@
   }
 
   .nav-bar {
-    margin-top: 2%;
+    padding-top: 2.5%;
     margin-bottom: 2%;
+    padding-bottom: 2.5%;
   }
 
   .nav-bar ul {

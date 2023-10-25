@@ -6,15 +6,24 @@ import SimpleSlider from "./Slider";
 import Hotels from "./Hotels.jsx";
 
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
   const navigate = useNavigate();
 
   const [shownav, setShowNav] = useState(false);
   const [animation, setAniamtion] = useState("");
+  const [load, setLoad] = useState(false);
 
-  return (
+  const [priceSort, setPriceSort] = useState("Lowest");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(true);
+    }, 1500);
+  }, []);
+
+  return load ? (
     <div className="home-page-con">
       <div className="nav-bar">
         <div className="Logo">
@@ -83,7 +92,7 @@ const HomePage = () => {
           </p>
           <div>
             <p>Sort By : </p>
-            <select>
+            <select onChange={(e) => setPriceSort(e.target.value)}>
               <option>Lowest</option>
               <option>Highest</option>
             </select>
@@ -91,7 +100,11 @@ const HomePage = () => {
         </div>
       </div>
       <hr style={{ marginTop: "1%", marginLeft: "2%", marginRight: "2%" }} />
-      <Hotels />
+      <Hotels priceSort={priceSort} />
+    </div>
+  ) : (
+    <div className="loader-con">
+      <h1>Rush Munch</h1>
     </div>
   );
 };
