@@ -22,7 +22,7 @@
   width: 100%;
   margin-top: 2.5%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   list-style: none;
@@ -197,5 +197,43 @@
     margin-top: 2.5%;
     margin-bottom: 5%;
     width: 30%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) and (orientation: landscape) {
+  .restarants-con {
+    padding: 2% 4%;
+  }
+
+  .restarants-con > li {
+    width: 40%;
+  }
+  .restarants-con > li > img {
+    height: 12.5vh;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1050px) and (orientation: portrait) {
+  .restarants-con {
+    padding: 2% 0%;
+  }
+
+  .restarants-con > li {
+    width: 45%;
+  }
+  .restarants-con > li > img {
+    height: 10vh;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1001px) and (orientation: landscape) {
+  .restarants-con > li {
+    width: 40%;
+  }
+
+  .restarants-con > li > img {
+    height: 15vh;
   }
 }

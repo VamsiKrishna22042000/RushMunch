@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SimpleSlider from "./Slider";
 import Hotels from "./Hotels.jsx";
+import Footer from "./Footer.jsx";
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -101,6 +102,7 @@ const HomePage = () => {
       </div>
       <hr style={{ marginTop: "1%", marginLeft: "2%", marginRight: "2%" }} />
       <Hotels priceSort={priceSort} />
+      <Footer />
     </div>
   ) : (
     <div className="loader-con">
