@@ -2,12 +2,15 @@ import "./home.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import SimpleSlider from "./Slider";
 import Hotels from "./Hotels.jsx";
 import Footer from "./Footer.jsx";
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+
+import Navbar from "./Navbar";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -26,61 +29,7 @@ const HomePage = () => {
 
   return load ? (
     <div className="home-page-con">
-      <div className="nav-bar">
-        <div className="Logo">
-          <h1>Rush Munch</h1>
-        </div>
-        <ul>
-          <li
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            Home
-          </li>
-          <li>Cart</li>
-          <li>
-            <button type="button">LogIn</button>
-          </li>
-        </ul>
-        <div
-          onClick={() => {
-            setShowNav(true);
-            setAniamtion("nav-bar-mobile1");
-          }}
-          className="nav-buttons-con"
-        >
-          <div className="ham-con"></div>
-          <div className="ham-con"></div>
-          <div className="ham-con"></div>
-        </div>
-      </div>
-      <div className={shownav ? animation : "d-none"}>
-        <button
-          onClick={() => {
-            setAniamtion("nav-bar-mobile2");
-            setTimeout(() => {
-              setShowNav(false);
-            }, 2000);
-          }}
-          type="button"
-        >
-          ›
-        </button>
-        <ul>
-          <li
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            Home
-          </li>
-          <li>Cart</li>
-          <li>
-            <button type="button">LogIn</button>
-          </li>
-        </ul>
-      </div>
+      <Navbar />
       <ul className="slider-main-con">
         <SimpleSlider />
       </ul>

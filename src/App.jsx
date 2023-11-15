@@ -6,6 +6,8 @@ import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./assets/HomePage";
 import NotFound from "./assets/NotFound";
+import Items from "./assets/Items";
+import Cart from "./assets/cart";
 
 function App() {
   useEffect(() => {
@@ -24,6 +26,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/items/:restrauntId" element={<Items />} />
+      <Route path="/cart" element={<Cart />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

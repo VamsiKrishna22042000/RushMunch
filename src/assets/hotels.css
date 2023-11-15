@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&family=Nosifer&family=Poppins:wght@300&display=swap");
 .hotels-con {
-  padding: 1% 2%;
+  padding: 1% 5%;
   font-size: 0.8rem;
   margin-top: 2.5%;
 }
@@ -13,6 +13,30 @@
   font-size: 0.7rem;
   border-width: 1px;
   outline: none;
+}
+
+.banner-loader {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotels-loader {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotels-loader > img {
+  height: 30%;
+}
+
+.banner-loader > img {
+  height: 80%;
 }
 
 /**Restarunts css*/
@@ -28,29 +52,30 @@
   list-style: none;
 }
 
-.restarants-con > li {
+.restarants-con > a {
   position: relative;
   width: 30%;
   flex-wrap: wrap;
-  margin: 1%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 0.5rem;
   cursor: pointer;
+  list-style: none;
+  text-decoration: none;
 }
 
-.restarants-con > li:hover {
+.restarants-con > a:hover {
   transition: all 0.5s ease-in-out;
   box-shadow: 1px 1px 10px #22222240;
 }
 
-.restarants-con > li > img {
-  height: 17vh;
-  width: 42.5%;
+.restarants-con > a > img {
+  height: 18vh !important;
+  width: 40%;
   border-radius: 0.5rem;
-  margin: 5% 3%;
+  margin: 5% 4%;
 }
 
 .restarants-details {
@@ -74,7 +99,7 @@
 }
 
 .restarants-details > h3 {
-  margin: 2.5% 0%;
+  margin: 2% 0%;
 }
 
 .detials-re {
@@ -144,7 +169,7 @@
     padding: 0%;
   }
 
-  .restarants-con > li {
+  .restarants-con > a {
     position: relative;
     height: auto;
     width: 100%;
@@ -152,15 +177,20 @@
     margin: 3% 1%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     border-radius: 0.5rem;
     cursor: pointer;
+    list-style: none;
+    text-decoration: none;
   }
 
-  .restarants-con > li > img {
-    height: 14vh;
-    margin: 5% 3%;
+  .restarants-con > a > img {
+    height: 15vh !important;
+    width: 36vw;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
   }
 
   .restarants-details {
@@ -205,11 +235,13 @@
     padding: 2% 4%;
   }
 
-  .restarants-con > li {
+  .restarants-con > a {
     width: 40%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
   }
-  .restarants-con > li > img {
-    height: 12.5vh;
+  .restarants-con > a > img {
+    height: 14.5vh !important;
     width: 40%;
   }
 }
@@ -219,21 +251,29 @@
     padding: 2% 0%;
   }
 
-  .restarants-con > li {
+  .restarants-con > a {
     width: 45%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
   }
-  .restarants-con > li > img {
-    height: 10vh;
+  .restarants-con > a > img {
+    height: 10vh !important;
     width: 40%;
   }
 }
 
-@media screen and (min-width: 1001px) and (orientation: landscape) {
-  .restarants-con > li {
-    width: 40%;
+@media screen and (min-width: 1001px) and (max-width: 1150px) and (orientation: landscape) {
+  .restarants-con {
+    padding: 2.5%;
+  }
+  .restarants-con > a {
+    width: 45%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2.5%;
   }
 
-  .restarants-con > li > img {
-    height: 15vh;
+  .restarants-con > a > img {
+    height: 14vh !important;
   }
 }

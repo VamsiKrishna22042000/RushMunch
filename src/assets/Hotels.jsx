@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "./hotels.css";
 import axios from "axios";
 
+import { Link } from "react-router-dom";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -18,6 +20,7 @@ const Hotels = ({ priceSort }) => {
   }, []);
 
   useEffect(() => {
+    setDetails([]);
     getHotels();
   }, [search, activePage, priceSort]);
 
@@ -56,7 +59,7 @@ const Hotels = ({ priceSort }) => {
     }
   };
 
-  return (
+  return details.length > 0 ? (
     <div className="hotels-con">
       <ToastContainer />
       <label>Search Restaurants &nbsp;:&nbsp; </label>
@@ -69,7 +72,7 @@ const Hotels = ({ priceSort }) => {
       />
       <ul className="restarants-con">
         {details.map((each) => (
-          <li key={each.name}>
+          <Link to={`/items/${each.id}`} key={each.name}>
             <img src={each.image_url} alt={each.id} />
             <div className="restarants-details">
               <h3>{each.name}</h3>
@@ -84,7 +87,7 @@ const Hotels = ({ priceSort }) => {
                 </p>
               </div>
             </div>
-          </li>
+          </Link>
         ))}
       </ul>
       <div className="pageination">
@@ -114,6 +117,10 @@ const Hotels = ({ priceSort }) => {
           </button>
         </div>
       </div>
+    </div>
+  ) : (
+    <div className="hotels-loader">
+      <img src="/food loader.gif" alt="foodloader" />
     </div>
   );
 };

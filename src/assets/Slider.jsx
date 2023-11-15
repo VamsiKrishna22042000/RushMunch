@@ -1,3 +1,5 @@
+import "./hotels.css";
+
 import React from "react";
 import Slider from "react-slick";
 import axios from "axios";
@@ -29,7 +31,7 @@ export default function SimpleSlider() {
         setOfferWall(res.data.offers);
       }
     } catch (error) {
-      console.log(error.message);
+      /**console.log(error.message);**/
     }
   };
 
@@ -43,11 +45,15 @@ export default function SimpleSlider() {
     autoplaySpeed: 2000,
   };
 
-  return (
+  return offerWall.length > 0 ? (
     <Slider {...settings}>
       {offerWall.map((each) => (
         <img key={each.id} src={each.image_url} alt="offer" />
       ))}
     </Slider>
+  ) : (
+    <div className="banner-loader">
+      <img src="/food loader.gif" />
+    </div>
   );
 }

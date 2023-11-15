@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&family=Nosifer&family=Poppins:wght@300&display=swap");
+
+.total-price {
+  position: absolute;
+  right: 10%;
+  background-color: maroon;
+  padding: 0.5% 1%;
+  color: #ffffff;
+  border: 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.cart-con {
+  height: 76vh;
+  margin-top: 6%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cart-con2 {
+  height: 76vh;
+  margin-top: 6%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-con2 > h1 {
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: maroon;
+}
+
+.cart-con2 > h1 > img {
+  width: 20%;
+}
+
+.cart-con2 > button {
+  border: 0;
+  padding: 1% 2%;
+  border-radius: 0.35rem;
+  background-color: maroon;
+  color: #ffffff;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.cart-con2 > button:hover {
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.9);
+}
+
+.cart-con > h2 {
+  font-family: "Poppins", sans-serif;
+  color: maroon;
+  margin-left: 5%;
+}
+
+.delete-button {
+  position: absolute;
+  right: 20%;
+  bottom: 7%;
+  color: maroon;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+}
+
+.items-data-cart {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  overflow-y: scroll;
+}
+
+.food-items {
+  position: relative;
+  height: auto;
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1% 5%;
+  margin: 1%;
+}
+
+.food-items img {
+  height: 20vh;
+  width: 40%;
+  border-radius: 0.5rem;
+}
+
+.item-details {
+  font-family: "Poppins", sans-serif;
+  width: 50%;
+  height: 10%;
+  text-transform: capitalize;
+}
+
+.item-details > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-details > p {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-around;
+  width: 22%;
+  align-items: center;
+  margin: 2% 0%;
+}
+
+.item-details img {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 2%;
+}
+
+.button-Add {
+  background-color: #ffffff;
+  border: 0.1rem solid maroon;
+  color: maroon;
+  padding: 1% 3%;
+  margin-top: 4%;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.inc-dec-con {
+  padding: 1% 3%;
+  margin-top: 0.4%;
+}
+
+.button-inc {
+  background-color: transparent;
+  padding: 1% 4.5%;
+  margin: 0% 2%;
+  border: none;
+  font-size: 1.2rem;
+  color: maroon;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .total-price {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    background-color: maroon;
+    padding: 1% 2%;
+    color: #ffffff;
+    border: 0;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+
+  .cart-con2 > h1 {
+    font-size: 2rem;
+  }
+
+  .cart-con2 > h1 > img {
+    width: 16%;
+  }
+
+  .cart-con2 > button {
+    border: 0;
+    padding: 2% 5%;
+    margin-top: 10%;
+  }
+
+  .cart-con {
+    margin-top: 12%;
+    position: relative;
+  }
+
+  .items-data-cart {
+    padding: 0;
+    align-content: flex-start;
+  }
+
+  .delete-button {
+    right: 16%;
+    bottom: 11%;
+  }
+
+  .food-items {
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 4.5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .food-items > img {
+    height: 14vh;
+    width: 50%;
+  }
+
+  .item-details {
+    padding-left: 5%;
+  }
+
+  .item-details > h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bolder;
+  }
+
+  .item-details svg {
+    font-size: 1.1rem !important;
+  }
+
+  .item-details > p {
+    font-size: 0.8rem;
+  }
+
+  .item-details > div img {
+    height: 8%;
+    width: 8%;
+  }
+
+  .item-details > div p {
+    font-size: 0.9rem;
+  }
+
+  .button-Add {
+    padding: 1.35% 5%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1023px) and (orientation: landscape) {
+  .cart-con {
+    margin-top: 8%;
+  }
+
+  .delete-button {
+    right: 16%;
+    bottom: 11%;
+  }
+
+  .food-items > img {
+    width: 50%;
+  }
+
+  .item-details {
+    padding-left: 5%;
+  }
+
+  .item-details > h5 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) and (orientation: landscape) {
+  .items-data-cart {
+    padding: 0;
+    align-content: flex-start;
+  }
+
+  .delete-button {
+    right: 25%;
+    bottom: 8%;
+  }
+
+  .food-items > img {
+    height: 15vh;
+  }
+  .item-details > h5 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1400px) and (orientation: portrait) {
+  .total-price {
+    padding: 1% 2%;
+    bottom: 0;
+  }
+
+  .cart-con {
+    position: relative;
+    margin-top: 8.5%;
+  }
+
+  .items-data-cart {
+    padding: 0;
+    align-content: flex-start;
+  }
+
+  .food-items > img {
+    height: 10vh;
+    width: 50%;
+  }
+  .item-details {
+    padding-left: 5%;
+  }
+
+  .item-details > h5 {
+    font-size: 0.9rem;
+  }
+
+  .item-details > p {
+    font-size: 0.7rem;
+  }
+  .item-details > div > p {
+    font-size: 0.7rem;
+  }
+  .item-details > div > img {
+    height: 8%;
+    width: 8%;
+  }
+
+  .ratings {
+    width: 28%;
+  }
+
+  .ratings > div > img {
+    height: 35%;
+    width: 35%;
+  }
+}
