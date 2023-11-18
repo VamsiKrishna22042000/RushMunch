@@ -191,10 +191,7 @@ const Items = () => {
                 {each.count === 0 ? (
                   <button
                     onClick={() => {
-                      if (
-                        isUser !== undefined &&
-                        isUser === "rushmunchaccess"
-                      ) {
+                      if (isUser !== undefined) {
                         handleIncrement(each.id);
                       } else {
                         navigate("/");
