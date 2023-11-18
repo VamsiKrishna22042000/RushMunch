@@ -1,4 +1,8 @@
+import Cookies from "js-cookie";
 import "./home.css";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { useState } from "react";
 
@@ -10,11 +14,20 @@ const Navbar = () => {
   const [shownav, setShowNav] = useState(false);
   const [animation, setAniamtion] = useState("");
 
+  const isUser = Cookies.get("jwt_isuser");
+
   return (
     <>
+      <ToastContainer />
       <div className="nav-bar">
         <div className="Logo">
-          <h1>Rush Munch</h1>
+          <h1
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Rush Munch
+          </h1>
         </div>
         <ul>
           <li
@@ -32,7 +45,37 @@ const Navbar = () => {
             Cart
           </li>
           <li>
-            <button type="button">LogIn</button>
+            {isUser === undefined ? (
+              <button
+                onClick={() => {
+                  navigate("/login");
+                }}
+                type="button"
+              >
+                Log In
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  toast.success("Logged Out", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                  });
+
+                  Cookies.remove("jwt_isuser");
+                  window.location.reload();
+                }}
+                type="button"
+              >
+                Log Out
+              </button>
+            )}
           </li>
         </ul>
         <div
@@ -75,7 +118,35 @@ const Navbar = () => {
             Cart
           </li>
           <li>
-            <button type="button">LogIn</button>
+            {isUser === undefined ? (
+              <button
+                onClick={() => {
+                  navigate("/login");
+                }}
+                type="button"
+              >
+                Log In
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  toast.success("Logged Out", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                  });
+                  Cookies.remove("jwt_isuser");
+                }}
+                type="button"
+              >
+                Log Out
+              </button>
+            )}
           </li>
         </ul>
       </div>

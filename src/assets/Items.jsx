@@ -16,6 +16,8 @@ import Footer from "./Footer.jsx";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import {
   addCartItem,
@@ -23,8 +25,13 @@ import {
   setInitialData,
 } from "../slices/itemsStore.js";
 
+import Cookies from "js-cookie";
+
 const Items = () => {
   const { restrauntId } = useParams();
+
+  const isUser = Cookies.get("jwt_isuser");
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -184,7 +191,14 @@ const Items = () => {
                 {each.count === 0 ? (
                   <button
                     onClick={() => {
-                      handleIncrement(each.id);
+                      if (
+                        isUser !== undefined &&
+                        isUser === "rushmunchaccess"
+                      ) {
+                        handleIncrement(each.id);
+                      } else {
+                        navigate("/");
+                      }
                     }}
                     id={each.id}
                     className="button-Add"

@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&family=Nosifer&family=Poppins:wght@300&display=swap");
+
+#spinner {
+  background-color: #ffffff;
+  height: 80%;
+  width: 30%;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#spinner > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-con {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./login.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-con h2 {
+  font-family: "Nosifer", sans-serif;
+  color: maroon;
+}
+
+.login-con > div {
+  background-color: #ffffff;
+  height: 80%;
+  width: 30%;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-con > div > div {
+  font-family: "Poppins", sans-serif;
+  height: 50%;
+  width: 55%;
+  font-size: 0.7rem;
+  margin-top: 5%;
+}
+
+.login-con > div > div p {
+  color: #222222;
+  font-weight: bolder;
+  margin: 5% 0%;
+}
+
+.login-con > div > div input {
+  height: 10%;
+  width: 100%;
+  background-color: #e2e8f0;
+  color: #222222;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.login-con > div > div button {
+  margin-top: 20%;
+  width: 100%;
+  color: #ffffff;
+  background-color: maroon;
+  border: 0;
+  padding: 3%;
+  border-radius: 0.25rem;
+  outline: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .login-con > div {
+    height: 60%;
+    width: 90%;
+  }
+
+  .login-con > div p {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1025px) and (orientation: portrait) {
+  .login-con > div {
+    height: 60%;
+    width: 50%;
+  }
+
+  .login-con h2 {
+    font-size: 2rem;
+  }
+
+  .login-con > div p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1025px) and (orientation: landscape) {
+  .login-con > div {
+    width: 40%;
+  }
+
+  .login-con > div h2 {
+    font-size: 1rem;
+    margin-bottom: -2%;
+  }
+
+  .login-con > div p {
+    font-size: 0.5rem;
+  }
+  .login-con > div > div input {
+    height: 12.5%;
+  }
+  .login-con > div > div button {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-height: 1023px) and (max-width: 1400px) and (orientation: landscape) {
+  .login-con > div {
+    height: 60%;
+    width: 40%;
+  }
+}

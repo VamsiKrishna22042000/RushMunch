@@ -1,18 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&family=Nosifer&family=Poppins:wght@300&display=swap");
 @keyframes nav-bar-animation1 {
   0% {
+    font-family: "Poppins", sans-serif !important;
     transform: translate(200%);
   }
   100% {
+    font-family: "Poppins", sans-serif !important;
     transform: translate(0%);
   }
 }
 
 @keyframes nav-bar-animation2 {
   0% {
+    font-family: "Poppins", sans-serif !important;
     transform: translate(200%);
   }
   100% {
+    font-family: "Poppins", sans-serif !important;
     transform: translate(0%);
   }
 }
@@ -140,6 +144,10 @@
   font-weight: bold;
 }
 
+.nav-bar ul li {
+  width: 30%;
+}
+
 .nav-bar ul button {
   font-size: 1rem;
   background-color: #800000;
@@ -250,6 +258,7 @@
   }
 
   .nav-bar-mobile1 {
+    font-family: "Poppins", sans-serif;
     display: inline;
     position: fixed;
     width: 80%;
@@ -302,6 +311,7 @@
   }
 
   .nav-bar-mobile2 {
+    font-family: "Poppins", sans-serif;
     display: inline;
     position: fixed;
     width: 80%;

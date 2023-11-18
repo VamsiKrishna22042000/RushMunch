@@ -2,12 +2,16 @@ import "./App.css";
 
 import { useEffect } from "react";
 
-import { Routes, Route } from "react-router-dom";
+import Cookies from "js-cookie";
+
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import HomePage from "./assets/HomePage";
 import NotFound from "./assets/NotFound";
 import Items from "./assets/Items";
-import Cart from "./assets/cart";
+import Login from "./assets/login";
+import ProtectedRoute from "./assets/ProtectedRoute";
+import SignUp from "./assets/signup";
 
 function App() {
   useEffect(() => {
@@ -23,12 +27,22 @@ function App() {
     }, 300);
   });
 
+  useEffect(() => {
+    const isUser = Cookies.get("jwt_isuser");
+    if (isUser === undefined) {
+      localStorage.removeItem("cartItems");
+    }
+  });
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/items/:restrauntId" element={<Items />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/cart" element={<ProtectedRoute />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="*" element={<Navigate to="/not-found" />} />
+      <Route path="/not-found" element={<NotFound />} />
     </Routes>
   );
 }
