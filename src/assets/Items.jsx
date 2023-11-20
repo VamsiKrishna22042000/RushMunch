@@ -194,7 +194,7 @@ const Items = () => {
                       if (isUser !== undefined) {
                         handleIncrement(each.id);
                       } else {
-                        navigate("/");
+                        navigate("/login");
                       }
                     }}
                     id={each.id}
