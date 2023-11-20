@@ -72,10 +72,11 @@
 }
 
 .restarants-con > a > img {
-  height: 18vh !important;
+  height: 17vh !important;
   width: 40%;
   border-radius: 0.5rem;
   margin: 5% 4%;
+  object-fit: cover;
 }
 
 .restarants-details {
@@ -186,11 +187,12 @@
   }
 
   .restarants-con > a > img {
-    height: 15vh !important;
+    height: 13vh !important;
     width: 36vw;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 5%;
+    object-fit: cover;
   }
 
   .restarants-details {
