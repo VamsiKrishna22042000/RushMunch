@@ -52,7 +52,7 @@
 }
 
 .cart-con2 {
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   overflow: hidden;
   display: flex;
@@ -195,7 +195,7 @@
 .bill-con {
   position: absolute;
   top: 10%;
-  height: 80vh;
+  height: 80%;
   width: 90vw;
   left: 5%;
   background-color: #ffffff;
